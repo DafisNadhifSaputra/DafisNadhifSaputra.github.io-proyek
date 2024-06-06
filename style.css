@@ -1,0 +1,159 @@
+/* style.css */
+
+/* Umum */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white; /* Warna teks default untuk background gelap */
+    background: linear-gradient(to right, #4c2885, #240b40) !important;
+}
+body {
+    /* ... (gaya background gradient Anda) ... */
+    position: relative; /* Agar pseudo-element bisa diposisikan relatif terhadap body */
+}
+/* style.css */
+body {
+    animation: gradientAnimation 10s ease infinite; /* Nama animasi, durasi, timing function, dan pengulangan */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body::before { /* Atau body::after */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: transparent; /* Latar belakang transparan agar tidak menutupi gradient */
+}
+
+#particles-js {
+    position: absolute; /* Posisikan partikel secara absolut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* style.css */
+body {
+    animation: gradientAnimation 10s ease infinite; /* Nama animasi, durasi, timing function, dan pengulangan */
+}
+
+body {
+    background-image: 
+        linear-gradient(to right, #4c2885, #240b40), /* Gradient */
+        url('path/to/particles.png'); /* Ganti dengan path gambar partikel Anda */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* style.css */
+.background-element {
+    animation: scaleAnimation 5s ease-in-out infinite alternate; /* Animasi perubahan skala */
+}
+
+@keyframes scaleAnimation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+#particles-js {
+    position: absolute; /* Posisikan elemen secara absolut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Tempatkan partikel di belakang elemen lain */
+}
+
+/* Header (Navbar) */
+.navbar {
+    @apply bg-opacity-80; /* Ubah menjadi transparan dengan opacity 80% */
+}
+.navbar-brand {
+    @apply text-white font-bold text-xl;
+}
+.nav-link {
+    @apply text-white hover:text-gray-300 transition duration-300;
+}
+
+/* Hero Section */
+.hero {
+    @apply min-h-screen flex flex-col items-center justify-center text-center;
+}
+.hero h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-4;
+}
+.hero p {
+    @apply text-lg md:text-xl lg:text-2xl;
+}
+
+/* About Section */
+.about {
+    @apply py-16 bg-white text-gray-800; /* Background putih untuk kontras */
+}
+.about h2 {
+    @apply text-3xl font-bold text-center mb-8;
+}
+.about .prose p {
+    @apply mb-4;
+}
+.about img { /* Gaya untuk gambar di bagian About */
+    @apply rounded-lg shadow-md w-full h-auto md:w-1/2; /* Setengah lebar pada layar medium ke atas */
+    @apply mx-auto; /* Margin kiri dan kanan otomatis */
+}
+
+/* Projects Section */
+.projects {
+    @apply py-16 bg-gray-100 text-gray-800; /* Background abu-abu terang */
+}
+.projects h2 {
+    @apply text-3xl font-bold text-center mb-8;
+}
+.projects .project-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg;
+}
+.projects .project-card img {
+    @apply w-full h-48 object-cover;
+}
+.projects h3 { /* Gaya untuk judul proyek */
+    @apply text-xl font-bold mb-2;
+}
+.projects p { /* Gaya untuk deskripsi proyek */
+    @apply text-gray-600;
+}
+
+/* Contact Section */
+.contact {
+    @apply py-16 bg-white text-gray-800; /* Background putih */
+}
+.contact h2 {
+    @apply text-3xl font-bold text-center mb-8;
+}
+.contact form input,
+.contact form textarea {
+    @apply border border-gray-300 rounded-md py-2 px-3 w-full mb-4;
+}
+.contact form button[type="submit"] {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+}
+
+/* Footer */
+footer {
+    @apply bg-gray-800 text-white py-4 text-center;
+}
+footer p {
+    @apply text-left; /* Mengatur teks agar berada di kiri */
+}

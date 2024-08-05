@@ -4,6 +4,9 @@
     {
       "src": "app.py",
       "use": "@vercel/python"
+      "config": { 
+        "buildCommand": "pyenv global 3.10 && pip install -r requirements.txt" 
+      }
     }
   ],
   "routes": [
